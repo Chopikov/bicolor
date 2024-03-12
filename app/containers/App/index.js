@@ -120,6 +120,7 @@ export default function App() {
       ...modalForm,
       city,
     };
+    ym(28484821, 'reachGoal', 'zakaz_zvonka');
     emailjs
       .send('service_u9nh2d6', 'gmail', template, 'user_WMeCZN1QgdHpppLtqZcZr')
       .then(() => {

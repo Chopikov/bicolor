@@ -21,6 +21,7 @@ export default function OrderCallComponent() {
   const submitForm = ev => {
     ev.preventDefault();
     setLoading(true);
+    ym(28484821, 'reachGoal', 'zakaz_podbor');
     emailjs
       .send('service_u9nh2d6', 'gmail', form, 'user_WMeCZN1QgdHpppLtqZcZr')
       .then(() => {

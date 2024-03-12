@@ -9,6 +9,9 @@ import marker from '../../images/marker.png';
 import telegram from '../../images/telegram-black.svg';
 
 export function HeaderComponent(props) {
+  const handlePhoneClick = ev => {
+    ym(28484821, 'reachGoal', 'click_phone');
+  };
   return (
     <div className="header">
       <Link to="/">
@@ -41,7 +44,10 @@ export function HeaderComponent(props) {
         </div>
         <div className="header_contacts">
           <span className="header_contacts_item">
-            <a href={`tel:${props.cities[props.current].phone}`}>
+            <a
+              href={`tel:${props.cities[props.current].phone}`}
+              onClick={handlePhoneClick}
+            >
               {props.cities[props.current].phone}
             </a>
           </span>

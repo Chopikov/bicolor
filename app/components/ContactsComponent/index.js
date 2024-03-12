@@ -7,6 +7,9 @@ import { MenuItem, Select } from '@material-ui/core';
 import telegram from '../../images/telegram-white.svg';
 
 export function ContactsComponent(props) {
+  const handlePhoneClick = ev => {
+    ym(28484821, 'reachGoal', 'click_phone');
+  };
   return (
     <section className="contacts">
       <span className="section-title">Контактная информация</span>
@@ -44,7 +47,10 @@ export function ContactsComponent(props) {
             </span>
             <div className="values">
               <span>
-                <a href={`tel:${props.cities[props.current].phone}`}>
+                <a
+                  href={`tel:${props.cities[props.current].phone}`}
+                  onClick={handlePhoneClick}
+                >
                   {props.cities[props.current].phone}
                 </a>
               </span>
